@@ -1,0 +1,23 @@
+#controls {
+  background-color: $color3;
+  flex: 1;
+  display: flex;
+  
+  #ships {
+    background-color: $color1;
+    flex: 1;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    >.ship {
+      height: 140px;
+      width: 40px;
+      background-color: white;
+    }
+  }
+
+  #info {
+    flex: 1;
+  }
+}

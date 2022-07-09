@@ -1,0 +1,44 @@
+
+@media only screen and (max-width: 600px) {
+  #main-container>#boards {
+    flex-direction:column-reverse;
+    .enemy-board {
+      max-height: 35%;
+    }
+  }
+}
+
+#boards {
+  background-color: $color2;
+  height: 60%;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+
+  .player-board {
+
+  }
+
+  .enemy-board {
+    max-height: 60%;
+  }
+
+  >.player-board, .enemy-board {
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    .board {
+      display: grid;
+      grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+      width: 100%;
+      height: 100%;
+
+      >div {
+        background-color: $color1;
+        border: 1px solid  $color2;
+      }
+    }
+  }
+}

@@ -1,8 +1,12 @@
-// import GameBoard from './GameBoard';
+import Player from './Player';
+import DisplayController from './DisplayController';
+import './style/base.scss';
 
-// const myboard = GameBoard();
-// myboard.place(0, 0, 0);
-
-// myboard.attack(0, 6);
-
-// console.log(myboard.board);
+// const w = document.querySelector('#main-container');
+// w.onclick = (e) => {
+//   if (e.target.style.flex === '1 1 0%') {
+//     e.target.style.flex = '2 1 0%';
+//   } else {
+//     e.target.style.flex = '1 1 0%';
+//   }
+// };

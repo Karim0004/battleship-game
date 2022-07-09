@@ -45,11 +45,16 @@ const GameBoard = () => {
     return true;
   };
 
+  let placedShips = 0;
+  const ready = () => (placedShips === 5);
+
   const place = (shipNumber, x, y, rotated = false) => {
     // checking the ship is a valid index in ships
     // and coordinates are valid
     if (!((shipNumber in ships)
       && checkCoordinates(x, y))) return false;
+
+    if (ready()) return false;
 
     // check the cells are valid for the ship to be placed
     for (let i = 0; i < ships[shipNumber].getLength(); i += 1) {
@@ -66,6 +71,7 @@ const GameBoard = () => {
         board[x][y + part].ship = { number: shipNumber, part, sank: false };
       }
     }
+    placedShips += 1;
     return true;
   };
 
